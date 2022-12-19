@@ -9,7 +9,6 @@ const SingleMovie = () => {
   const { id } = useParams();
   const { movie } = useGlobalContext();
   const [noOfmovieforbotm, setNoOfMovieForBotm] = useState(4);
-  setNoOfMovieForBotm(noOfmovieforbotm);
   const sliceSecond = movie.slice(0, noOfmovieforbotm);
   const singlemovie = movie.filter((curMovie) => curMovie.imdbID === id);
   console.log(singlemovie);
