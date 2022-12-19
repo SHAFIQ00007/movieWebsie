@@ -1,15 +1,14 @@
 import { useParams } from "react-router-dom";
 import { useGlobalContext } from "../../context";
 import { Link } from "react-router-dom";
-import { useState } from "react";
+// import { useEffect, useState } from "react";
 import "../SingleMoviepage/singlemovie.css";
 import Search from "../Navbar/Navbar";
 
 const SingleMovie = () => {
   const { id } = useParams();
   const { movie } = useGlobalContext();
-  const [noOfmovieforbotm, setNoOfMovieForBotm] = useState(4);
-  const sliceSecond = movie.slice(0, noOfmovieforbotm);
+  const sliceSecond = movie.slice(0, 4);
   const singlemovie = movie.filter((curMovie) => curMovie.imdbID === id);
   console.log(singlemovie);
   return (
